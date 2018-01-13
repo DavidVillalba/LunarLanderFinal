@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lunar Lander</title>
+        <meta name="description" content="Proyecto Lunar Lander">
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
+        <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
+        <script src="js/js.js"></script>
+    </head>
+    <body>
+        <div id="background">
+            <img src="img/fondo.jpg" alt="fondo">
+        </div>
+        <div id="nave">
+            <img id="naveimg" src="img/nave.png" alt="img nave">
+        </div>
+        <div id="boom">
+            <img id="boomimg" src="img/boom.gif" alt="img boom">
+        </div>
+        <div class="a">
+            <div id="hidem">
+                Reanudar
+              
+            </div>
+            <ul id="menu">
+                <li><a href="#"><span id="pausa">Pausa</span></a></li>
+                <li><a href="#"><span id="reiniciar">Reiniciar</span></a></li>
+                <li><a href="#"><span id="ajustes">Ajustes</span></a></li>
+            </ul>
+        </div>
+        <div class="b"></div>
+        <div class="c">
+            <div id="showm">
+                Menu
+            </div>
+            <ul id="cpanel">
+                <li>Velocidad:<br><span id="velocidad">100</span> m/s</li>
+                <li>Fuel:<br><span id="fuel">100</span> %</li>
+                <li>Altura:<br><span id="altura">70.00</span> m</li>
+            </ul>
+        </div>
+        <div class="moon">
+            <img src="img/moon.png" alt="img luna">
+        </div>
+        <div id="ventanas">
+            <div id="vEnhorabuena">
+                <div id="tVictoria">Victoria</div>
+                <h2>¡ENHORABUENA!</h2>
+                <div class="btnCerrar">
+                    <a href="#">
+                        <span class="cerrar">Jugar otra vez</span>
+                    </a>
+                </div>
+            </div>
+            <div id="vDerrota">
+                <div id="tDerrota">Derrota</div>
+                <h2>¡Game Over!</h2>
+                <p>La velocidad debe ser inferior a 5 m/s en modo fácil o inferior a 1 m/s en modo difícil.</p>
+                <div class="btnCerrar">
+                    <a href="#">
+                        <span class="cerrar">Intentar de nuevo</span>
+                    </a>
+                </div>
+            </div>
+            <div id="vAjustes">
+                <div id="tAjustes">
+                    Ajustes
+                </div>
+                <ul id="mAjustes">
+                    <li><a href="#"><span id="modo">Modo: Fácil</span></a></li>
+                    <li><a href="#"><span id="instrucciones">Instrucciones</span></a></li>
+                    <li><a href="#"><span id="acerca">Acerca de...</span></a></li>
+                </ul>
+                <div class="btnCerrar">
+                    <a href="#">
+                        <span class="cerrar">Cerrar</span>
+                    </a>
+                </div>
+            </div>
+            <div id="vInstrucciones">
+                <div id="tInstrucciones">Instrucciones</div>
+                <p>
+                    El juego consiste en frenar la caída de la nave mediante el uso del motor, presionando la tecla espacio 
+                    o mediante el botón en la versión móvil, para que la nave pueda aterrizar adecuadamente sobre la superficie 
+                    lunar la velocidad de caída debe ser inferior a 5 m/s en modo fácil o inferior a 1 m/s en modo difícil.
+                    Además hay que tener en cuenta que la nave cuenta con un medidor de gasolina que se acabará si el jugador 
+                    abusa del uso del motor de la nave.
+                </p>
+                <div class="btnCerrar">
+                    <a href="#">
+                        <span class="cerrar">Cerrar</span>
+                    </a>
+                </div>
+            </div>
+            <div id="vAcerca">
+                <div id="tAcerca">
+                    Acerca de este sitio web
+                </div>
+                <p>Es un proyecto de la asignatura Lenguaje de marcas</p>
+                <div class="btnCerrar">
+                    <a href="#">
+                        <span class="cerrar">Cerrar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
