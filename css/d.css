@@ -82,8 +82,9 @@ a{
     width:100%;
     height:20%;
 }
-#hidem,#showm{
+#showm{
     display:none;
+    position: absolute;
 }
 #ventanas{
     width: 100%;
