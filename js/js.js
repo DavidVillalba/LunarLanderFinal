@@ -25,7 +25,7 @@ window.onload = function () {
     //definición de eventos
     //mostrar menú móvil
     document.getElementById("showm").onclick = function () {
-        document.getElementsByClassName("a")[0].style.display = "inline-block";
+        document.getElementsByClassName("a")[0].style.display = "block";
         stop();
     };
     //ocultar menú móvil
@@ -70,14 +70,12 @@ window.onload = function () {
             pause();
         }
         mostrarInstrucciones();
-        //document.getElementsByClassName("a")[0].style.display = "none";
     };
     document.getElementById("acerca").onclick = function () {
         if (document.getElementById("pausa").innerHTML != "Reanudar") {
             pause();
         }
         mostrarAcerca();
-        //document.getElementsByClassName("a")[0].style.display = "none";
     };
     document.getElementsByClassName("cerrar")[0].onclick = function () {
         ocultarVictoria();
@@ -116,7 +114,7 @@ function reiniciar() {
     aterrizado = false;
     document.getElementById("fuel").innerHTML = "100";
     document.getElementById("pausa").innerHTML = "Pausa";
-    
+    document.getElementById('menu').style.display = 'block';
 }
 
 function pause() {
@@ -147,7 +145,7 @@ function moverNave() {
     y += v * dt;
     //actualizar marcadores
     velocidad.innerHTML = v.toFixed(2);
-    marcadorAltura=70-y;
+    marcadorAltura = 70 - y;
     if (marcadorAltura < 0) {
         marcadorAltura = 0;
     }
@@ -219,7 +217,6 @@ function mostrarVictoria() {
 }
 function ocultarVictoria() {
     document.getElementById('vEnhorabuena').style.display = 'none';
-    document.getElementById('menu').style.display = 'block';
 }
 
 function mostrarDerrota() {
@@ -231,7 +228,6 @@ function mostrarDerrota() {
 function ocultarDerrota() {
     document.getElementById('vDerrota').style.display = 'none';
     document.getElementById('boom').style.display = 'none';
-    document.getElementById('menu').style.display = 'block';
 }
 
 function mostrarAjustes() {

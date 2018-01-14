@@ -30,6 +30,9 @@ body,html{
     padding-top:18px;
     padding-bottom: 18px;
 }
+#sMenu{
+    display: none;
+}
 #play,#pausa,#reiniciar,#ajustes,#instrucciones,#acerca,#modo,#velocidad,#fuel,#altura,.cerrar{
     font-size: 30px;
 }
