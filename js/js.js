@@ -45,13 +45,16 @@ window.onload = function () {
         document.getElementsByClassName("b")[0].style.display = "none";
     }
     //encender/apagar el motor al hacer click en la pantalla
-    /*document.onclick = function () {
-     if (a == g) {
-     motorOn();
-     } else {
-     motorOff();
-     }
-     }*/
+    document.getElementById("palanca").onclick = function () {
+        if (a == g) {
+            motorOn();
+            document.getElementById("power").src = "img/botonOn.png";
+        } else {
+            motorOff();
+            document.getElementById("power").src = "img/botonOff.png";
+        }
+    };
+
     //encender/apagar al apretar/soltar una tecla
     document.onkeydown = function (e) {
         if (document.getElementById("pausa").innerHTML == "Reanudar") {
@@ -120,6 +123,7 @@ function reiniciar() {
     document.getElementById("pausa").innerHTML = "Pausa";
     document.getElementById('menu').style.display = 'block';
     document.getElementById('showm').style.display = 'block';
+    document.getElementById("power").src = "img/botonOff.png";
 }
 
 function pause() {
@@ -186,7 +190,6 @@ function motorOn() {
     //si ha aterrizado o se quedas sin fuel el motor se apaga
     if (aterrizado || c == 0) {
         motorOff();
-        //document.getElementById("pausa").style.display='none';
     } else {
         //el motor da aceleración a la nave
         a = -g;
@@ -219,7 +222,7 @@ function actualizarFuel() {
 function mostrarVictoria() {
     document.getElementById('vEnhorabuena').style.display = 'block'; // Y lo hacemos visible
     document.getElementById('menu').style.display = 'none';
-    document.getElementById('showm').style.display='none';
+    document.getElementById('showm').style.display = 'none';
 }
 function ocultarVictoria() {
     document.getElementById('vEnhorabuena').style.display = 'none';
@@ -229,7 +232,7 @@ function mostrarDerrota() {
     document.getElementById('vDerrota').style.display = 'block'; // Y lo hacemos visible
     document.getElementById('boom').style.display = 'block';
     document.getElementById('menu').style.display = 'none';
-    document.getElementById('showm').style.display='none';
+    document.getElementById('showm').style.display = 'none';
 }
 
 function ocultarDerrota() {
