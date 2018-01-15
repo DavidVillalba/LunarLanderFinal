@@ -25,14 +25,25 @@ window.onload = function () {
     //definición de eventos
     //mostrar menú móvil
     document.getElementById("showm").onclick = function () {
-        document.getElementsByClassName("a")[0].style.display = "block";
+        document.getElementsByClassName("b")[0].style.display = "block";
+        document.getElementById("showm").style.display = "none";
         stop();
     };
-    //ocultar menú móvil
-    document.getElementById("hidem").onclick = function () {
-        document.getElementsByClassName("a")[0].style.display = "none";
+
+    document.getElementById("sPausa").onclick = function () {
+        document.getElementsByClassName("b")[0].style.display = "none";
+        document.getElementById("showm").style.display = "block";
         start();
-    };
+    }
+    document.getElementById("sReiniciar").onclick = function () {
+        document.getElementsByClassName("b")[0].style.display = "none";
+        document.getElementById("showm").style.display = "block";
+        reiniciar();
+    }
+    document.getElementById("sAjustes").onclick = function () {
+        mostrarAjustes();
+        document.getElementsByClassName("b")[0].style.display = "none";
+    }
     //encender/apagar el motor al hacer click en la pantalla
     /*document.onclick = function () {
      if (a == g) {
@@ -65,18 +76,8 @@ window.onload = function () {
         mostrarAjustes();
     };
     document.getElementById("modo").onclick = modo;
-    document.getElementById("instrucciones").onclick = function () {
-        if (document.getElementById("pausa").innerHTML != "Reanudar") {
-            pause();
-        }
-        mostrarInstrucciones();
-    };
-    document.getElementById("acerca").onclick = function () {
-        if (document.getElementById("pausa").innerHTML != "Reanudar") {
-            pause();
-        }
-        mostrarAcerca();
-    };
+    document.getElementById("instrucciones").onclick = mostrarInstrucciones;
+    document.getElementById("acerca").onclick = mostrarAcerca;
     document.getElementsByClassName("cerrar")[0].onclick = function () {
         ocultarVictoria();
         reiniciar();
@@ -85,7 +86,10 @@ window.onload = function () {
         ocultarDerrota();
         reiniciar();
     };
-    document.getElementsByClassName("cerrar")[2].onclick = ocultarAjustes;
+    document.getElementsByClassName("cerrar")[2].onclick = function () {
+        document.getElementsByClassName("b")[0].style.display = "block";
+        ocultarAjustes();
+    }
     document.getElementsByClassName("cerrar")[3].onclick = ocultarInstrucciones;
     document.getElementsByClassName("cerrar")[4].onclick = ocultarAcerca;
 };
@@ -115,6 +119,7 @@ function reiniciar() {
     document.getElementById("fuel").innerHTML = "100";
     document.getElementById("pausa").innerHTML = "Pausa";
     document.getElementById('menu').style.display = 'block';
+    document.getElementById('showm').style.display = 'block';
 }
 
 function pause() {
@@ -214,6 +219,7 @@ function actualizarFuel() {
 function mostrarVictoria() {
     document.getElementById('vEnhorabuena').style.display = 'block'; // Y lo hacemos visible
     document.getElementById('menu').style.display = 'none';
+    document.getElementById('showm').style.display='none';
 }
 function ocultarVictoria() {
     document.getElementById('vEnhorabuena').style.display = 'none';
@@ -223,6 +229,7 @@ function mostrarDerrota() {
     document.getElementById('vDerrota').style.display = 'block'; // Y lo hacemos visible
     document.getElementById('boom').style.display = 'block';
     document.getElementById('menu').style.display = 'none';
+    document.getElementById('showm').style.display='none';
 }
 
 function ocultarDerrota() {
