@@ -48,10 +48,10 @@ window.onload = function () {
     document.getElementById("palanca").onclick = function () {
         if (a == g) {
             motorOn();
-            document.getElementById("power").src = "img/botonOn.png";
+            document.getElementById("power").src = "img/botonon.png";
         } else {
             motorOff();
-            document.getElementById("power").src = "img/botonOff.png";
+            document.getElementById("power").src = "img/botonoff.png";
         }
     };
 
